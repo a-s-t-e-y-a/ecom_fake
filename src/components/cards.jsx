@@ -1,8 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export function ProductTwo({data,image , title,description,price}) {
   return (
-    <div className="mx-auto grid w-full max-w-7xl items-center space-y-4 px-2 py-10 md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-4">
+    <>
+    <Link to ="/product">
+      <div className="mx-auto grid w-full max-w-7xl items-center space-y-4 px-2 py-10 md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-4">
         {data.map((info) => (
       <div className="relative aspect-[16/9]  w-auto rounded-md md:aspect-auto md:h-[400px]">
         <img
@@ -23,5 +26,8 @@ export function ProductTwo({data,image , title,description,price}) {
       </div>
        ))}
     </div>
+    </Link>
+    </>
+  
   );
 }
